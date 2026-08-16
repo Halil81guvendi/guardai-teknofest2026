@@ -1,0 +1,41 @@
+# ==============================
+# GuardAI - requirements.txt
+# TEKNOFEST 2026 - Sosyal İnovasyon Yarışması
+# ==============================
+
+# --- Backend / API ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+pydantic>=2.9.2
+python-multipart>=0.0.9
+
+# --- UI (Jüri Demo Arayüzü) ---
+gradio>=4.44.0
+
+# --- NLP (Metin Analizi) ---
+transformers>=4.44.2
+torch>=2.6.0
+sentencepiece>=0.2.0
+accelerate>=0.34.2
+
+# --- Computer Vision (Görsel Manipülasyon / Deepfake Tespiti) ---
+timm>=1.0.9
+pillow>=10.4.0
+opencv-python-headless>=4.10.0.84
+
+# --- Davranışsal Bot Tespiti (Klasik ML) ---
+scikit-learn>=1.5.2
+xgboost>=2.1.1
+pandas>=2.2.2
+numpy>=1.26.4
+joblib>=1.4.2
+
+# --- Yardımcı ---
+python-dotenv>=1.0.1
+requests>=2.32.3
+matplotlib>=3.9.2
+
+# NOT: Sürümler ">=" ile esnetildi çünkü torch==2.4.1 gibi eski sabit
+# sürümler Python 3.13 için derlenmiş wheel içermiyor (torch, 3.13 desteğine
+# 2.6.0 ile başladı). Eğer hâlâ sürüm çakışması yaşarsan en garantili çözüm
+# Python 3.11 veya 3.12 ile bir sanal ortam (venv) kullanmaktır - aşağıya bakınız.

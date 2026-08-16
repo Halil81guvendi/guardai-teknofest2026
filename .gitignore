@@ -1,0 +1,32 @@
+# Eğitilmiş model ağırlıkları (büyük dosyalar, repoya dahil edilmez)
+trained_models/
+_checkpoints_*/
+
+# Değerlendirme çıktıları (isteğe bağlı; küçükse tutulabilir)
+reports/*.png
+reports/*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Sanal ortam
+venv/
+env/
+.venv/
+
+# Veri seti önbelleği (HuggingFace cache)
+.cache/
+*.cache
+
+# İşletim sistemi / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ortam değişkenleri (API anahtarları vb.)
+.env
