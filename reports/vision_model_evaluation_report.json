@@ -1,0 +1,45 @@
+{
+  "model_checkpoint": "google/vit-base-patch16-224-in21k",
+  "dataset": "Hemg/deepfake-and-real-images",
+  "class_names": [
+    "Fake",
+    "Real"
+  ],
+  "train_size": 152268,
+  "val_size": 19033,
+  "test_size": 19034,
+  "epochs": 3,
+  "batch_size": 16,
+  "grad_accum": 2,
+  "learning_rate": 3e-05,
+  "test_metrics": {
+    "Fake": {
+      "precision": 0.9490804719889444,
+      "recall": 0.9284525790349417,
+      "f1-score": 0.9386532092729853,
+      "support": 9616.0
+    },
+    "Real": {
+      "precision": 0.9285343305287213,
+      "recall": 0.9491399447865789,
+      "f1-score": 0.9387240745602521,
+      "support": 9418.0
+    },
+    "accuracy": 0.9386886623936115,
+    "macro avg": {
+      "precision": 0.9388074012588328,
+      "recall": 0.9387962619107604,
+      "f1-score": 0.9386886419166187,
+      "support": 19034.0
+    },
+    "weighted avg": {
+      "precision": 0.9389142662375323,
+      "recall": 0.9386886623936115,
+      "f1-score": 0.9386882733307492,
+      "support": 19034.0
+    }
+  },
+  "test_accuracy": 0.9386886623936115,
+  "test_f1": 0.9387240745602521,
+  "output_dir": "./trained_models/guardai-vision-deepfake"
+}

@@ -1,0 +1,57 @@
+{
+  "model_type": "RandomForestClassifier",
+  "dataset": "airt-ml/twitter-human-bots",
+  "feature_names": [
+    "favourites_count",
+    "followers_count",
+    "friends_count",
+    "followers_friends_ratio",
+    "statuses_count",
+    "average_tweets_per_day",
+    "account_age_days",
+    "verified",
+    "geo_enabled",
+    "default_profile",
+    "default_profile_image",
+    "description_length",
+    "has_location",
+    "screen_name_digit_ratio"
+  ],
+  "train_size": 29950,
+  "val_size": 3744,
+  "test_size": 3744,
+  "n_estimators": 300,
+  "max_depth": 12,
+  "min_samples_leaf": 3,
+  "test_metrics": {
+    "human": {
+      "precision": 0.9010375099760575,
+      "recall": 0.9024780175859313,
+      "f1-score": 0.9017571884984026,
+      "support": 2502.0
+    },
+    "bot": {
+      "precision": 0.802907915993538,
+      "recall": 0.8003220611916264,
+      "f1-score": 0.8016129032258065,
+      "support": 1242.0
+    },
+    "accuracy": 0.8685897435897436,
+    "macro avg": {
+      "precision": 0.8519727129847977,
+      "recall": 0.8514000393887788,
+      "f1-score": 0.8516850458621046,
+      "support": 3744.0
+    },
+    "weighted avg": {
+      "precision": 0.8684849042799332,
+      "recall": 0.8685897435897436,
+      "f1-score": 0.8685362477108587,
+      "support": 3744.0
+    }
+  },
+  "test_accuracy": 0.8685897435897436,
+  "test_f1": 0.8016129032258065,
+  "test_roc_auc": 0.9295124287043797,
+  "output_dir": "./trained_models/guardai-bot-detector"
+}

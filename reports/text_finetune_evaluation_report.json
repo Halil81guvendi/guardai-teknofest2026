@@ -1,0 +1,45 @@
+{
+  "model_checkpoint": "dbmdz/bert-base-turkish-cased",
+  "datasets_used": [
+    "Overfit-GM/turkish-toxic-language",
+    "Toygar/turkish-offensive-language-detection",
+    "coltekin/offenseval2020_tr"
+  ],
+  "dropout": 0.2,
+  "label_smoothing": 0.05,
+  "train_size": 106182,
+  "val_size": 9369,
+  "test_size": 9369,
+  "selection_metric": "f1",
+  "test_metrics": {
+    "NOT_TOXIC": {
+      "precision": 0.9585737840065952,
+      "recall": 0.9699687174139728,
+      "f1-score": 0.9642375868145537,
+      "support": 4795.0
+    },
+    "TOXIC": {
+      "precision": 0.9681204339163162,
+      "recall": 0.9560559685177088,
+      "f1-score": 0.9620503794962051,
+      "support": 4574.0
+    },
+    "accuracy": 0.9631764329170669,
+    "macro avg": {
+      "precision": 0.9633471089614557,
+      "recall": 0.9630123429658408,
+      "f1-score": 0.9631439831553794,
+      "support": 9369.0
+    },
+    "weighted avg": {
+      "precision": 0.9632345137202319,
+      "recall": 0.9631764329170669,
+      "f1-score": 0.9631697795486633,
+      "support": 9369.0
+    }
+  },
+  "test_accuracy": 0.9631764329170669,
+  "test_f1": 0.9620503794962051,
+  "test_roc_auc": 0.9924263860702442,
+  "output_dir": "./trained_models/guardai-text-turkish-toxic-finetune"
+}

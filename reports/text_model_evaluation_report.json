@@ -1,0 +1,40 @@
+{
+  "model_checkpoint": "dbmdz/bert-base-turkish-cased",
+  "dataset": "Overfit-GM/turkish-toxic-language",
+  "train_size": 62240,
+  "val_size": 7780,
+  "test_size": 7780,
+  "epochs": 4,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "test_metrics": {
+    "NOT_TOXIC": {
+      "precision": 0.9724047306176085,
+      "recall": 0.9822139633660738,
+      "f1-score": 0.977284733227681,
+      "support": 3767.0
+    },
+    "TOXIC": {
+      "precision": 0.9831446540880503,
+      "recall": 0.9738350361325692,
+      "f1-score": 0.9784677015523285,
+      "support": 4013.0
+    },
+    "accuracy": 0.9778920308483291,
+    "macro avg": {
+      "precision": 0.9777746923528294,
+      "recall": 0.9780244997493215,
+      "f1-score": 0.9778762173900047,
+      "support": 7780.0
+    },
+    "weighted avg": {
+      "precision": 0.9779444880580818,
+      "recall": 0.9778920308483291,
+      "f1-score": 0.977894919845523,
+      "support": 7780.0
+    }
+  },
+  "test_accuracy": 0.9778920308483291,
+  "test_f1": 0.9784677015523285,
+  "output_dir": "./trained_models/guardai-text-turkish-toxic"
+}
